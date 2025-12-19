@@ -1,0 +1,191 @@
+body {
+    font-family: 'DotGothic16', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+/* navBar */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #1f1f1f;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background-color: #ff4040;
+    color: #fff;
+}
+
+/* Section Visibility */
+section {
+    display: none;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section.active {
+    display: block;
+}
+
+/* Heading and Divider Styling */
+h1 {
+    color: #ff4040;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border-top: 1px solid #444;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 4px solid #ff4040;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Camera Specs Layout */
+.camera-specs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.camera-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    border: 4px solid #ff4040;
+    cursor: pointer;
+}
+
+/* editing logo */
+
+.editing-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 1px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #444;
+    cursor: pointer;
+}
+/* Top Shots Layout */
+.top-shot {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.top-shot img {
+    border-radius: 10px;
+    max-width: 300px;
+    border: 4px solid #ff4040;
+    cursor: pointer;
+}
+
+.top-shot.left img {
+    order: 0;
+}
+
+.top-shot.right img {
+    order: 1;
+}
+
+.top-shot.left .details {
+    margin-left: 20px;
+    text-align: right;
+    flex: 1;
+}
+
+.top-shot.right .details {
+    margin-right: 20px;
+    text-align: left;
+    flex: 1;
+}
+
+.top-shot + .divider {
+    margin-top: 10px;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+footer a {
+    color: #ff4040;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Lightbox (Full-Screen Image View) */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #ff4040;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

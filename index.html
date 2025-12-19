@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas Rath Photography</title>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+
+    <div class="navbar">
+        <a href="#home" onclick="showSection('home')">Home</a>
+        <a href="#top-shots" onclick="showSection('top-shots')">Top Shots</a>
+        <a href="#gallery" onclick="showSection('gallery')">Gallery</a>
+        <a href="#camera-specs" onclick="showSection('camera-specs')">Camera Specs</a>
+    </div>
+
+
+    <!-- Home -->
+
+    <section id="home" class="active">
+        <h1>Myself</h1>
+        <div class="profile-image" style="background-image: url('pfp.jpg');" onclick="openLightbox('pfp.jpg')"></div>
+
+        <p>Just a <strong>Fifteen-year-old techie</strong>, I'm into <strong>Arduino</strong> and <strong>Raspberry Pi</strong> projects, dabble in <strong>photography</strong>, and am fascinated by <strong>operating systems</strong>. Also trying to level up my <strong>hacking</strong> skills <strong>^_^</strong></p>
+    </section>
+
+
+    <!-- Top Shots Section -->
+
+    <section id="top-shots">
+        <h1>Top Shots</h1>
+
+        <p>
+            <strong>Editing Software:</strong> Polarr Pro Photo Editor
+            <img src="polarr.jpg" alt="Polarr Logo" width="20" height="20" onclick="openLightbox('polarr.jpg')">
+        </p>
+        
+        
+         <p>Here are some of my best shots taken with my Canon EOS 1100D. Click on the images to view.</p> 
+
+
+        <div class="divider"></div>
+
+        <!-- topShot 1 (lefty) -->
+
+        <div class="top-shot left">
+            <img src="topShot1.jpg" alt="Top Shot 1" onclick="openLightbox('topShot1.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>05-10-2024[09:44]</strong></li>
+                    <li>ISO Speed: <strong>ISO-500</strong></li>
+                    <li>F-Stop: <strong>f/5.6</strong></li>
+                    <li>Exposure Time: <strong>1/80 sec</strong></li>
+                    <li>Exposure Bias: <strong>-1 step</strong></li>
+                    <li>Focal Length: <strong>41mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+        <!-- topShot 2 (righty) -->
+
+        <div class="top-shot right">
+            <img src="topShot2.jpg" alt="Top Shot 2" onclick="openLightbox('topShot2.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>02-10-2024[19:39]</strong></li>
+                    <li>ISO Speed: <strong>ISO-800</strong ></li>
+                    <li>F-Stop: <strong>f/3.5</strong></li>
+                    <li>Exposure Time: <strong>1/30 sec</strong></li>
+                    <li>Exposure Bias: <strong>-5 step</strong></li>
+                    <li>Focal Length: <strong>20mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="top-shot left">
+
+            <img src="topShot3.jpg" alt="Top Shot 3" onclick="openLightbox('topShot3.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>05-10-2024[09:05]</strong></li>
+                    <li>ISO Speed: <strong>ISO-3200</strong></li>
+                    <li>F-Stop: <strong>f/5.6</strong></li>
+                    <li>Exposure Time: <strong>1/13 sec</strong></li>
+                    <li>Exposure Bias: <strong>-1 step</strong></li>
+                    <li>Focal Length: <strong>18mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="top-shot right">
+
+            <img src="topShot4.jpg" alt="Top Shot 4" onclick="openLightbox('topShot4.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>05-10-2024[09:50]</strong></li>
+                    <li>ISO Speed: <strong>ISO-500</strong></li>
+                    <li>F-Stop: <strong>f/5.6</strong></li>
+                    <li>Exposure Time: <strong>1/40 sec</strong></li>
+                    <li>Exposure Bias: <strong>-1 step</strong></li>
+                    <li>Focal Length: <strong>20mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+
+
+        <div class="top-shot left">
+            <img src="topShot5.jpg" alt="Top Shot 5" onclick="openLightbox('topShot5.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>05-10-2024[09:44]</strong></li>
+                    <li>ISO Speed: <strong>ISO-500</strong></li>
+                    <li>F-Stop: <strong>f/5.6</strong></li>
+                    <li>Exposure Time: <strong>1/80 sec</strong></li>
+                    <li>Exposure Bias: <strong>-1 step</strong></li>
+                    <li>Focal Length: <strong>41mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+
+
+        <div class="top-shot right">
+            <img src="topShot6.jpg" alt="Top Shot 6" onclick="openLightbox('topShot6.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>02-10-2024[19:39]</strong></li>
+                    <li>ISO Speed: <strong>ISO-800</strong ></li>
+                    <li>F-Stop: <strong>f/3.5</strong></li>
+                    <li>Exposure Time: <strong>1/30 sec</strong></li>
+                    <li>Exposure Bias: <strong>-5 step</strong></li>
+                    <li>Focal Length: <strong>20mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+
+        <div class="top-shot left">
+            <img src="topShot7.jpg" alt="Top Shot 7" onclick="openLightbox('topShot7.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>05-10-2024[09:44]</strong></li>
+                    <li>ISO Speed: <strong>ISO-500</strong></li>
+                    <li>F-Stop: <strong>f/5.6</strong></li>
+                    <li>Exposure Time: <strong>1/80 sec</strong></li>
+                    <li>Exposure Bias: <strong>-1 step</strong></li>
+                    <li>Focal Length: <strong>41mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+
+
+        <div class="top-shot right">
+            <img src="topShot8.jpg" alt="Top Shot 8" onclick="openLightbox('topShot8.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>02-10-2024[19:39]</strong></li>
+                    <li>ISO Speed: <strong>ISO-800</strong ></li>
+                    <li>F-Stop: <strong>f/3.5</strong></li>
+                    <li>Exposure Time: <strong>1/30 sec</strong></li>
+                    <li>Exposure Bias: <strong>-5 step</strong></li>
+                    <li>Focal Length: <strong>20mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+
+
+        <div class="top-shot left">
+            <img src="topShot9.jpg" alt="Top Shot 9" onclick="openLightbox('topShot9.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>05-10-2024[09:44]</strong></li>
+                    <li>ISO Speed: <strong>ISO-500</strong></li>
+                    <li>F-Stop: <strong>f/5.6</strong></li>
+                    <li>Exposure Time: <strong>1/80 sec</strong></li>
+                    <li>Exposure Bias: <strong>-1 step</strong></li>
+                    <li>Focal Length: <strong>41mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+
+
+        <div class="top-shot right">
+            <img src="topShot10.jpg" alt="Top Shot 10" onclick="openLightbox('topShot10.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>02-10-2024[19:39]</strong></li>
+                    <li>ISO Speed: <strong>ISO-800</strong ></li>
+                    <li>F-Stop: <strong>f/3.5</strong></li>
+                    <li>Exposure Time: <strong>1/30 sec</strong></li>
+                    <li>Exposure Bias: <strong>-5 step</strong></li>
+                    <li>Focal Length: <strong>20mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+
+
+
+    </section>
+
+
+<!-- Gallery-->
+
+<section id="gallery">
+    <h1>Gallery</h1>
+    <div class="divider"></div>
+
+</section>
+
+
+<!-- cameraSpecs -->
+
+<section id="camera-specs">
+    <h1>Camera Specs</h1>
+    <div class="divider"></div>
+    <div class="camera-specs-container">
+        <div>
+            <h2>Canon EOS 1100D</h2>
+            <p>Launched: March 2011</p>
+            <p>16.1 Megapixels</p>
+            <p>ISO 100-6400</p>
+        </div>
+        <div class="camera-image" style="background-image: url('camera-image.jpg');" onclick="openLightbox('camera-image.jpg')"></div>
+    </div>
+</section>
+
+
+    <footer>
+        <p>Contact: <a href="mailto:rath.shreyas@gmail.com">rath.shreyas@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/7975959395" target="_blank">Click to chat</a></p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full Size Image">
+        <button class="close-btn" onclick="closeLightbox()">×</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
