@@ -18,6 +18,7 @@
         <a href="#top-shots" onclick="showSection('top-shots')">Top Shots</a>
         <a href="#gallery" onclick="showSection('gallery')">Gallery</a>
         <a href="#camera-specs" onclick="showSection('camera-specs')">Camera Specs</a>
+	<a href="#build-log" onclick="showSection('build-log')">Build Log</a>
     </div>
 
 
@@ -25,6 +26,28 @@
 
     <section id="home" class="active">
         <h1>Myself</h1>
+
+	<!-- 
+	<div class="terminal">
+	<pre>
+	~$ whoami
+	shreyas
+
+	~$ uptime -since --user shreyas
+	2010-02-24
+	</pre>
+	</div>
+	-->
+
+<div class="terminal">
+<pre id="terminal">~$ <span id="cmd1"></span>
+<span id="out1"></span>
+<span id="prompt2"></span><span id="cmd2"></span>
+<span id="out2"></span></pre>
+</div>
+
+
+
         <div class="profile-image" style="background-image: url('pfp.jpg');" onclick="openLightbox('pfp.jpg')"></div>
 
         <p>Just a <strong>Fifteen-year-old techie</strong>, I'm into <strong>Arduino</strong> and <strong>Raspberry Pi</strong> projects, dabble in <strong>photography</strong>, and am fascinated by <strong>operating systems</strong>. Also trying to level up my <strong>hacking</strong> skills <strong>^_^</strong></p>
@@ -215,6 +238,38 @@
         <div class="divider"></div>
 
 
+        <div class="top-shot left">
+            <img src="topShot11.jpg" alt="Top Shot 11" onclick="openLightbox('topShot11.jpg')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>09-03-2026[17:23]</strong></li>
+                    <li>ISO Speed: <strong>ISO-100</strong></li>
+                    <li>F-Stop: <strong>f/5.6</strong></li>
+                    <li>Exposure Time: <strong>1/250 sec</strong></li>
+                    <li>Exposure Bias: <strong>0 step</strong></li>
+                    <li>Focal Length: <strong>50mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+
+
+        <div class="top-shot right">
+            <img src="topShot12.png" alt="Top Shot 12" onclick="openLightbox('topShot12.png')">
+            <div class="details">
+                <ul>
+                    <li>Date Taken: <strong>10-03-2026[15:27]</strong></li>
+                    <li>ISO Speed: <strong>ISO-1600</strong ></li>
+                    <li>F-Stop: <strong>f/4</strong></li>
+                    <li>Exposure Time: <strong>1/160 sec</strong></li>
+                    <li>Exposure Bias: <strong>+0.7 step</strong></li>
+                    <li>Focal Length: <strong>50mm</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+
 
 
     </section>
@@ -224,6 +279,12 @@
 
 <section id="gallery">
 <h1>Gallery</h1>
+
+        <p>
+            <strong>unEdited</strong> (straight from the camera-roll)
+ 
+        </p>
+
     <div class="divider"></div>
 
     <div class="gallery-grid">
@@ -232,7 +293,10 @@
         <img src="g3.JPG" alt="Gallery 3" onclick="openLightbox('g3.JPG')">
         <img src="g4.JPG" alt="Gallery 4" onclick="openLightbox('g4.JPG')">
         <img src="g5.JPG" alt="Gallery 5" onclick="openLightbox('g5.JPG')">
-        <img src="g6.jpeg" alt="Gallery 6" onclick="openLightbox('g6.jpeg')">
+        <img src="g6.JPG" alt="Gallery 6" onclick="openLightbox('g6.JPG')">
+        <img src="g7.JPG" alt="Gallery 7" onclick="openLightbox('g7.JPG')">
+        <img src="g8.JPG" alt="Gallery 8" onclick="openLightbox('g8.JPG')">
+        <img src="g9.JPG" alt="Gallery 9" onclick="openLightbox('g9.JPG')">
     </div>
 </section>
 
@@ -254,9 +318,36 @@
 </section>
 
 
+
+
+
+
+<section id="build-log">
+
+<h1>Build Log</h1>
+
+<img src="log.jpg" class="build-image" onclick="openLightbox('log.jpg')">
+
+<p>
+This website was built from scratch using simple HTML, CSS, and a bit of JavaScript. I wanted to make something personal instead of using a website builder, mostly just for the fun of it and to see what I could create with code alone. The idea was to keep everything minimal and clean while still adding small details that reflect my interests in technology and operating systems, like the terminal-style elements on the homepage. A lot of the site is intentionally simple, because I wanted to focus on understanding how things actually work rather than relying on heavy frameworks or templates.
+</p>
+<p>
+While the code was written by me, I’ll admit that the help of large language models was lightly enlisted at times for efficiency — mainly when I got stuck on something small or wanted a quicker way to implement an idea. That said, the overall design, structure, and most of the coding were done by me as part of the process of learning and experimenting. In the end, this site is really just a small project built for fun, curiosity, and the satisfaction of making something myself from the ground up.
+</p>
+
+</section>
+
+
+
+
+
+
+
+
     <footer>
         <p>Contact: <a href="mailto:rath.shreyas@gmail.com">rath.shreyas@gmail.com</a></p>
         <p>WhatsApp: <a href="https://wa.me/7975959395" target="_blank">Click to chat</a></p>
+	<p>Instagram: <a href="https://instagram.com/rath.shreyas" target="_blank">@rath.shreyas</a></p>
     </footer>
 
     <!-- Lightbox -->
