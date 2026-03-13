@@ -1,3 +1,12 @@
+/* =========================
+   GENERAL RESET & BODY
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'DotGothic16', sans-serif;
     background-color: #121212;
@@ -6,12 +15,13 @@ body {
     padding: 20px;
 }
 
-
-/* navBar */
-
+/* =========================
+   NAVIGATION BAR
+   ========================= */
 .navbar {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;           /* allows wrapping on small screens */
     background-color: #1f1f1f;
     padding: 10px 0;
     position: sticky;
@@ -23,9 +33,10 @@ body {
     color: #e0e0e0;
     text-decoration: none;
     padding: 10px 20px;
-    margin: 0 5px;
+    margin: 5px;               /* spacing for mobile wrap */
     border-radius: 5px;
     transition: background-color 0.3s;
+    white-space: nowrap;       /* prevent text wrapping inside links */
 }
 
 .navbar a.active,
@@ -34,10 +45,12 @@ body {
     color: #fff;
 }
 
-/* Section Visibility */
+/* =========================
+   SECTIONS & VISIBILITY
+   ========================= */
 section {
     display: none;
-    padding: 40px;
+    padding: 40px 20px;        /* padding adjusted for mobile */
     max-width: 900px;
     margin: 0 auto;
 }
@@ -46,10 +59,13 @@ section.active {
     display: block;
 }
 
-/* Heading and Divider Styling */
+/* =========================
+   HEADINGS & DIVIDERS
+   ========================= */
 h1 {
     color: #ff4040;
     margin-bottom: 20px;
+    font-size: 1.8em;
 }
 
 .divider {
@@ -58,58 +74,93 @@ h1 {
     width: 80%;
 }
 
-/* Profile Image */
+/* =========================
+   HOME / PROFILE IMAGE
+   ========================= */
 .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 80%;
+    max-width: 300px;
+    height: auto;             /* maintain aspect ratio */
+    aspect-ratio: 1 / 1;      /* keep perfect circle */
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     border: 4px solid #ff4040;
-    margin-bottom: 20px;
     cursor: pointer;
 }
 
-
-
-pre{
+/* =========================
+   TERMINAL BOX / WHOAMI
+   ========================= */
+pre {
     margin-bottom: 10px;
     font-family: monospace;
-    line-height: 0.7;
+    line-height: 1.2;
+    overflow-x: auto;        /* prevents overflow on small screens */
 }
 
-
-
-/* terminal box */
-.terminal{
-
-    background-color: #0d0d0d;  /* dark background */
+.terminal {
+    background-color: #0d0d0d;
     border-left: 2px solid #ff4040;
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 30px;
-
-    min-height: 110px;  /* keeps terminal size fixed */
-
+    min-height: 110px;
     font-family: monospace;
-    font-size: 14px;            /* bigger text */
-
+    font-size: 14px;
+    overflow-x: auto;        /* horizontal scroll if needed */
 }
 
+/* =========================
+   TOP SHOTS
+   ========================= */
+.top-shot {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-wrap: wrap;        /* allows stacking on mobile */
+}
 
+.top-shot img {
+    border-radius: 10px;
+    max-width: 100%;
+    width: 300px;           /* max size for desktop */
+    height: auto;
+    border: 4px solid #ff4040;
+    cursor: pointer;
+    flex-shrink: 0;
+}
 
-/* Camera Specs Layout */
+.top-shot.left img { order: 0; }
+.top-shot.right img { order: 1; }
+
+.top-shot.left .details,
+.top-shot.right .details {
+    flex: 1;
+    margin: 20px 0 0 0;     /* spacing for mobile */
+}
+
+.top-shot.left .details { text-align: right; }
+.top-shot.right .details { text-align: left; }
+
+.top-shot + .divider { margin-top: 10px; }
+
+/* =========================
+   CAMERA SPECS
+   ========================= */
 .camera-specs-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
+    flex-wrap: wrap;        /* stack on small screens */
 }
-
 .camera-image {
-    width: 300px;
-    height: 200px;
+    width: 100%;          /* takes full width of container */
+    max-width: 300px;     /* max width for desktop */
+    height: auto;         /* keeps original aspect ratio */
+    aspect-ratio: 3 / 2;  /* optional: keeps nice landscape ratio */
     border-radius: 10px;
     background-size: cover;
     background-position: center;
@@ -117,84 +168,54 @@ pre{
     cursor: pointer;
 }
 
-
-
-.build-image{
-
-    width:100%;
-    max-width:900px;
-
-    border-radius:10px;
-    border:4px solid #ff4040;
-
-    margin:20px 0;
-    cursor:pointer;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* editing logo */
-
-.editing-logo {
-    width: 30px;
-    height: 30px;
-    border-radius: 1px;
-    background-size: cover;
-    background-position: center;
-    border: 1px solid #444;
-    cursor: pointer;
-}
-/* Top Shots Layout */
-.top-shot {
-    display: flex;
-    margin-bottom: 20px;
-    align-items: center;
-}
-
-.top-shot img {
+/* =========================
+   BUILD LOG SECTION
+   ========================= */
+.build-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
     border-radius: 10px;
-    max-width: 300px;
     border: 4px solid #ff4040;
+    margin: 20px auto;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
-.top-shot.left img {
-    order: 0;
+.build-image:hover { transform: scale(1.02); }
+
+.build-log p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
-.top-shot.right img {
-    order: 1;
+/* =========================
+   GALLERY
+   ========================= */
+.gallery-grid {
+    column-count: 3;
+    column-gap: 15px;
 }
 
-.top-shot.left .details {
-    margin-left: 20px;
-    text-align: right;
-    flex: 1;
+.gallery-grid img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 3px solid #ff4040;
+    cursor: pointer;
+    break-inside: avoid;
+    transition: transform 0.2s;
 }
 
-.top-shot.right .details {
-    margin-right: 20px;
-    text-align: left;
-    flex: 1;
+.gallery-grid img:hover {
+    transform: scale(1.05);
 }
 
-.top-shot + .divider {
-    margin-top: 10px;
-}
-
-/* Footer Styling */
+/* =========================
+   FOOTER
+   ========================= */
 footer {
     margin-top: 40px;
     text-align: center;
@@ -211,7 +232,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Lightbox (Full-Screen Image View) */
+/* =========================
+   LIGHTBOX
+   ========================= */
 .lightbox {
     display: none;
     position: fixed;
@@ -219,7 +242,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0,0,0,0.8);
     align-items: center;
     justify-content: center;
     z-index: 9999;
@@ -231,9 +254,7 @@ footer a:hover {
     border-radius: 10px;
 }
 
-.lightbox.active {
-    display: flex;
-}
+.lightbox.active { display: flex; }
 
 .lightbox .close-btn {
     position: absolute;
@@ -246,24 +267,46 @@ footer a:hover {
     cursor: pointer;
 }
 
-
-/* Gallery grid - puzzle / masonry style */
-.gallery-grid {
-    column-count: 3;          /* number of columns */
-    column-gap: 15px;         /* space between columns */
-}
-
-.gallery-grid img {
-    width: 100%;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    border: 3px solid #ff4040;
+/* =========================
+   EDITING LOGO
+   ========================= */
+.editing-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 1px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #444;
     cursor: pointer;
-    break-inside: avoid;      /* stops images from breaking */
-    transition: transform 0.2s;
 }
 
-/* tiny hover zoom just for feel */
-.gallery-grid img:hover {
-    transform: scale(1.05);
+/* =========================
+   RESPONSIVE / MOBILE QUERIES
+   ========================= */
+@media (max-width: 900px) {
+    .gallery-grid { column-count: 2; }
+    .camera-specs-container { justify-content: center; gap: 15px; }
+}
+
+@media (max-width: 600px) {.ko
+    body { padding: 10px; }
+    section { padding: 20px 10px; }
+
+    /* Navbar stacks vertically */
+    .navbar { flex-direction: column; align-items: center; }
+    .navbar a { margin: 5px 0; }
+
+    /* Stack Top Shots vertically */
+    .top-shot { flex-direction: column; align-items: center; }
+    .top-shot.left .details,
+    .top-shot.right .details { margin: 10px 0 0 0; text-align: center; }
+
+    /* Gallery single column */
+    .gallery-grid { column-count: 1; }
+
+    /* Terminal scroll if wide */
+    .terminal { font-size: 13px; }
+
+    /* Profile image responsive */
+    .profile-image { width: 60%; max-width: 250px; }
 }
