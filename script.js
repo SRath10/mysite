@@ -2,6 +2,37 @@ let terminalRunning = false;
 
 
 
+
+
+
+function enterFullscreenAndLandscape() {
+
+    const elem = document.documentElement;
+
+    /* Request fullscreen */
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { // Safari
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // old Edge
+        elem.msRequestFullscreen();
+    }
+
+    /* Try to lock landscape */
+    if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock("landscape").catch(function(err) {
+            console.log("Orientation lock not supported:", err);
+        });
+    }
+}
+
+/* Trigger once on first tap/click */
+document.addEventListener("click", enterFullscreenAndLandscape, { once: true });
+
+
+
+
+
 // --- Show a section and hide all others (super simple) ---
 function showSection(sectionId) {
 
