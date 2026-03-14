@@ -1,4 +1,38 @@
 /* =========================
+   ROTATE DEVICE WARNING
+   ========================= */
+
+#rotate-warning{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#121212;
+    color:#e0e0e0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    z-index:99999;
+    font-family:monospace;
+}
+
+/* show ONLY when phone is portrait */
+
+@media screen and (max-width:700px) and (orientation:portrait){
+    #rotate-warning{
+        display:flex;
+    }
+}
+
+
+
+
+
+
+
+/* =========================
    GENERAL RESET & BODY
    ========================= */
 * {
